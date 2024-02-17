@@ -1,4 +1,4 @@
-from database import add_entry,get_entries
+from database import add_entry, get_entries, create_table
 
 
 menu = """Select one the following options:
@@ -11,10 +11,11 @@ Your Selection:
 
 welcome = "Welcome to the diary!"
 
+
 def new_entry():
     entry_content = input("What is on your mind? ")
-    entry_date = input("Enter the Date: ") 
-    add_entry(entry_content,entry_date)
+    entry_date = input("Enter the Date: ")
+    add_entry(entry_content, entry_date)
 
 
 def view_entries(entires):
@@ -23,6 +24,8 @@ def view_entries(entires):
 
 
 print(welcome)
+create_table()
+
 
 while (user_input := input(menu)) != "3":
     if user_input == "1":
