@@ -1,7 +1,7 @@
 import sqlite3
 
 connection = sqlite3.connect("data.db")
-connection.row_factory = sqlite3.Row  # doing this to get the results from select query as an dict
+connection.row_factory = sqlite3.Row  # doing this to get the results from select query as a dict
 
 
 def create_table():

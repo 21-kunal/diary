@@ -18,8 +18,8 @@ def new_entry():
     add_entry(entry_content, entry_date)
 
 
-def view_entries(entires):
-    for entry in entires:
+def view_entries(entries):
+    for entry in entries:
         print(f"Date: {entry['date']}\n{entry['content']}\n\n")
 
 
@@ -31,7 +31,7 @@ while (user_input := input(menu)) != "3":
     if user_input == "1":
         new_entry()
     elif user_input == "2":
-        entires = get_entries()
-        view_entries(entires)
+        entries = get_entries()
+        view_entries(entries)
     else:
         print("Invalid option, please try again!")
